@@ -1,0 +1,51 @@
+.task {
+    width: 440px;
+    height: 40px ;
+    background-color: #faf1f1;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto 0;
+    padding: 0 8px ;
+    font-size: 14px;
+  }
+
+
+  .check-container {
+    width: 16px;
+    height: 16px;
+    border: none;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #9d4147;
+    align-items: center;
+    display: flex;
+  }
+
+  .check-container:hover {
+    cursor: pointer;
+  }
+
+  .delete-button {
+    background-color: transparent;
+    border: none;
+  }
+
+  .delete {
+    font-size: 1.2rem;
+    color: #9d4147;
+  }
+
+  .delete:hover {
+    cursor: pointer;
+  }
+
+  .task-completed {
+    text-decoration: line-through;
+  }
+
+  .icon-completed {
+    color: #9d4147;
+  }
+

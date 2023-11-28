@@ -1,0 +1,25 @@
+.tasks {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-header div {
+    display: flex;
+    gap: 5px;
+}
+
+.task-header div p,
+.task-header div span {
+    font-size: 14px;
+}
+
+.task-header div span {
+    color: #9d4147;
+    font-weight: 600;
+}
