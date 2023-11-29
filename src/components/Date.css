@@ -9,6 +9,15 @@
     color: #9d4147;
 }
 
+.dark-mode .date {
+    color: #fff;
+}
+
 .month {
     color: #c7c5c5;
 }
+
+.dark-mode .month {
+    color: #fff;
+}
+

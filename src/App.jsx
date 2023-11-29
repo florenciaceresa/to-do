@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { ToDo } from './components/ToDo'
+import { DarkModeProvider } from './components/DarkModeContext';
+
 
 const LOCAL_STORAGE_KEY = 'todo:savedTasks';
 
@@ -26,10 +28,10 @@ function App() {
   
 
   return (
-    <>
-    <ToDo onAddTask={addTask} setTaskAndSave={setTaskAndSave}/>
-      
-    </>
+    <DarkModeProvider>
+      <ToDo onAddTask={addTask} setTaskAndSave={setTaskAndSave}/>
+    </DarkModeProvider>
+
   )
 }
 

@@ -11,6 +11,11 @@
     font-size: 14px;
   }
 
+  .dark-mode .task {
+    background-color: #414040;
+    color: #fff;
+  }
+
 
   .check-container {
     width: 16px;
@@ -21,6 +26,11 @@
     border: 1px solid #9d4147;
     align-items: center;
     display: flex;
+  }
+
+  .dark-mode .check-container {
+    background-color: #414040;
+    border: 1px solid #fff;
   }
 
   .check-container:hover {
@@ -37,6 +47,10 @@
     color: #9d4147;
   }
 
+  .dark-mode .delete {
+    color: #fff;
+  }
+
   .delete:hover {
     cursor: pointer;
   }
@@ -47,5 +61,9 @@
 
   .icon-completed {
     color: #9d4147;
+  }
+
+  .dark-mode .icon-completed {
+    color: #fff;
   }
 

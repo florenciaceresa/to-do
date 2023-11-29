@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './Date.css'
+import { useDarkMode } from './DarkModeContext';
+
 
 export function Fecha() {
     const [fechaActual, setFechaActual] = useState(new Date());
+    const { darkMode } = useDarkMode();
+
 
   useEffect(() => {
     const intervalo = setInterval(() => {
@@ -18,7 +22,7 @@ export function Fecha() {
   const formatoMonth = { month: 'long' };
 
   return (
-    <div className='date-container'>
+    <div className={`child-component ${darkMode ? 'dark-mode' : 'date-container'}`}>
       <p className='date'>{fechaActual.toLocaleDateString('en-US', Weekday)}, {fechaActual.toLocaleDateString('en-US', Day)}</p>
       <p className='month'>{fechaActual.toLocaleDateString('en-US', formatoMonth)}</p>
     </div>

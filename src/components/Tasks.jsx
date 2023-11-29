@@ -1,16 +1,20 @@
 import './Tasks.css'
 import { Task } from './Task'
+import { useDarkMode } from './DarkModeContext';
+
 
 export function Tasks({ tasks, onComplete, onDelete }) {
     const tasksQuantify = tasks.length;
     const completedTasks = tasks.filter(task => task.isCompleted).length;
+    const { darkMode } = useDarkMode();
+
 
     if (tasks.length === 0) {
         return null; // Si no hay tareas, no renderizar nada
     }
 
     return(
-        <section className="tasks">
+        <section className={`child-component ${darkMode ? 'dark-mode' : 'tasks'}`}>
             <header className='task-header'>
                 <div>
                     <p>To do</p>

@@ -8,5 +8,56 @@
     flex-direction: column;
     padding: 30px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
 
+.dark-mode {
+    background-color: #333333;
+    width: 500px;
+    height: auto;
+    display: flex;
+    margin: 50px auto 0;
+    border-radius: 5px;
+    flex-direction: column;
+    padding: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.button-dark-mode {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 465px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #9d4147;
+}
+
+.button-dark-mode:hover {
+    cursor: pointer;
+    background-color: #db868b;
+    border: none;
+}
+
+.dark-mode .button-dark-mode {
+    border: 1px solid #fff;
+}
+
+.dark-mode .button-dark-mode:hover {
+    border: none;
+}
+
+.moon {
+    font-size: 1.5rem;
+    color: #9d4147;
+}
+
+.moon:hover {
+    color: #fff;
+}
+
+.dark-mode .moon {
+    color: #fff;
 }

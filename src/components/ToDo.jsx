@@ -3,6 +3,9 @@ import { Fecha } from './Date'
 import { AddTask } from './AddTask'
 import { Tasks } from './Tasks'
 import { useEffect, useState } from 'react'
+import { useDarkMode } from './DarkModeContext'
+import { CiDark } from "react-icons/ci";
+
 
 const LOCAL_STORAGE_KEY = 'todo:savedTasks';
 
@@ -10,6 +13,9 @@ const LOCAL_STORAGE_KEY = 'todo:savedTasks';
 
 export function ToDo({ onAddTask, setTaskAndSave }) {
     const [tasks, setTasks] = useState([]);
+    const [darkMode, setDarkMode] = useState(false);
+    const toggleDarkMode = () => setDarkMode(prevMode => !prevMode);
+    
 
     useEffect(() => {
       loadSavedTasks();
@@ -54,15 +60,18 @@ export function ToDo({ onAddTask, setTaskAndSave }) {
   }
 
   
-
   function setTaskAndSave(newTasks) {
     setTasks(newTasks);
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newTasks));
   }
+
+
+  
   
 
     return(
-        <div className='to-do-container'>
+        <div className={`child-component ${darkMode ? 'dark-mode' : 'to-do-container'}`}>
+            <button onClick={toggleDarkMode} className='button-dark-mode'><CiDark className='moon' /></button>
             <Fecha/>
             <AddTask onAddTask={handleAddTask}/>
             <Tasks tasks={tasks} onComplete={toggleTaskCompletedById} onDelete={deleteTaskById}/>

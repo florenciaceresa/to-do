@@ -4,6 +4,12 @@
     justify-content: space-between;
 }
 
+.dark-mode .input {
+    background-color: #414040;
+    color: #fff;
+    font-size: 14px;
+}
+
 .input {
     width: 350px;
     height: 30px;
@@ -11,12 +17,17 @@
     background-color: #faf1f1;
     border-radius: 3px;
     padding: 10px;
+    font-size: 14px;
 
 }
 
 .input::placeholder {
     font-size: 14px;
     color: #211a1a;
+}
+
+.dark-mode .input::placeholder {
+    color: #fff;
 }
 
 .button {
@@ -32,5 +43,7 @@
     cursor: pointer;
     background-color: #db868b;
 }
+
+
 
 

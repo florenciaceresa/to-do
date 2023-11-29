@@ -9,6 +9,11 @@
     justify-content: space-between;
 }
 
+.dark-mode .task-header div p,
+.dark-mode .task-header div span {
+    color: #fff;
+}
+
 .task-header div {
     display: flex;
     gap: 5px;
